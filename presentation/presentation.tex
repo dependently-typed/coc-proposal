@@ -1,0 +1,187 @@
+\documentclass{beamer}
+
+\usetheme{dtyped}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  allcolors=.,
+  urlcolor=blue,
+}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{citations.bib}
+
+% from https://tex.stackexchange.com/questions/178800/creating-sections-each-with-title-pages-in-beamers-slides
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\title{\texttt{dependently-typed}}
+\subtitle{A programming languages club at Georgia Tech}
+\author{Elton Pinto}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    Slides and proposal can be found at \\ \small\url{https://github.com/dependently-typed/coc-proposal}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{What is \texttt{dependently-typed}?}
+
+\begin{frame}{About the club}
+  \begin{columns}
+    \begin{column}{0.8\textwidth}
+      \begin{itemize}
+      \item Programming languages (PL) and compilers club
+      \item Open to undergraduate, graduate, and PhD students
+      \item Named after Richard Eisenberg's \citetitle{eisenberg2016dependent} \cite{eisenberg2016dependent}
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.15\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{assets/dragon.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Motivation}
+  \begin{itemize}
+  \item Important to understand what makes programming languages tick
+  \item Form an important layer of abstraction above hardware
+  \item Lots of exciting work in the field
+  \item Couldn't find a club/community on campus that specifically addressed PL and compiler enthusiasts
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exciting work in the field}
+  \begin{exampleblock}{Formal Verification}
+    \begin{itemize}
+      \item Project Everest from Microsoft: Use F* to build formally verified computing stacks. Network protocols like QUIC, cryptography primitives
+      \item MIT PLV: Koika \cite{koika2020}, fscq \cite{chen2015using}
+    \end{itemize}
+  \end{exampleblock}
+
+  \begin{exampleblock}{Systems Programming}
+    \begin{itemize}
+    \item Modern languages like Rust and Zig aim to democratize systems programming and eliminate common-place bugs
+    \item SSLab at Georgia Tech recently published RUDRA \cite{rudra2021}. Won distinguished artifact at SOSP'21
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Exciting work in the field (contd)}
+    \begin{exampleblock}{ML frameworks}
+    \begin{itemize}
+    \item PyTorch, TensorFlow, and JAX use a Just-in-time (JIT) compiler to synthesize and run workloads
+    \item Sam Gross authored an implementation of Python that gets rid of the GIL \cite{gross2021nogil}
+    \item Development of typed array programming languages like Dex \cite{dexlang2021}
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{What do we do?}
+  \begin{itemize}
+  \item Talks, workshops, and paper reading sessions
+  \item Projects
+  \item Networking and community building
+  \end{itemize}
+\end{frame}
+
+\section{Why do we want to be a CoC org?}
+
+\begin{frame}{Why CoC?}
+  \begin{itemize}
+  \item Target audience largely resides in the student body of the CoC
+  \item CoC can help with organizing initiatives like a hackathon, sending students to conferences, and networking sessions
+  \item Have a positive impact on the community
+  \end{itemize}
+\end{frame}
+
+\section{Governance}
+
+\begin{frame}{How goes it?}
+  \begin{itemize}
+  \item Elect a board to manage and run the club
+  \item Prioritize the community over personal incentives
+  \item Major decisions are driven through community deliberation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Board Structure}
+  \begin{block}{Titles}
+    \begin{itemize}
+    \item Overall Director
+    \item Director of Operations
+    \item Director of Finance
+    \item Director of Communication
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Advisor}
+    Dr. Qirun Zhang (\href{mailto://qrzhang@gatech.edu}{qrzhang@gatech.edu})
+  \end{block}
+\end{frame}
+
+\begin{frame}{Code of Conduct}
+  \begin{itemize}
+  \item \url{https://dtyped-wiki.netlify.app/about/code-of-conduct/}
+  \item Violations will be handled case-by-case
+  \end{itemize}
+\end{frame}
+
+\section{State of the org and future plans}
+
+\begin{frame}{State of the org}
+  \begin{itemize}
+  \item Active Discord community (over a 100 members)
+  \item Hosted several talks and workshops (documented in the wiki)
+  \item Attending conferences (Eg: LLVM dev conf)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Future plans (next semester)}
+  \begin{itemize}
+  \item Maintain a blog documenting some of our technical work
+  \item Organize a langjam (we have a committee for it)
+  \item Have a professor/engineer give a tech talk, and host a networking session thereafter
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Future plans (long term)}
+  \begin{itemize}
+  \item Empower the next generation of innovators in the field
+  \item Collaborate with research labs on campus to engage in novel research
+  \item Develop and maintain a mainstream piece of OSS software
+  \end{itemize}
+\end{frame}
+
+\section{Questions}
+
+\begin{frame}
+  \begin{itemize}
+  \item Website: \url{https://dtyped.netlify.app}
+  \item Wiki: \url{https://dtyped-wiki.netlify.app}
+  \end{itemize}
+\end{frame}
+
+
+\end{document}

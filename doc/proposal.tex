@@ -1,0 +1,130 @@
+% preamble
+\documentclass[12pt]{article}
+
+% metadata
+\title{
+  dependently-typed\\
+  \large A Programming Languages club at Georgia Tech
+}
+\author{Elton Pinto}
+\date{}
+
+% packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=cyan
+}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[margin=1in]{geometry}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{citations.bib}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1.5}
+
+% document
+\begin{document}
+
+\maketitle
+
+\section{Introduction} \label{sec:intro}
+
+\verb|dependently-typed| is the programming languages (PL) club at Georgia Tech. It aims to bring together programming language and compiler enthusiasts. We welcome undergradute, graduate, and PhD students. This proposal outlines who we are, why we want to become a College of Computing (CoC) student organization, and how we intend to make an impact on the CoC community and beyond. You can learn more about us through our \href{https://dtyped.netlify.app/}{website} and \href{https://dtyped-wiki.netlify.app/}{wiki}.
+
+\section{Motivation} \label{sec:motivation}
+
+Programming languages are one of the first things people interface with when learning how to program computers. They raise the level of abstraction and enable us to make the most out of hardware. It is hard to imagine a world where binary is the sole abstraction we possess. We need tools that allow us to be expressive and productive while not compromising on efficiency. Programming languages and compilers let us do that.
+
+
+We believe it is important to understand what makes today's programming languages tick, and how we can improve them. The club exists to provide a platform for students interested in the subject matter to engage with fellow peers and have fun learning all there is about the subject.
+
+\section{What do we do?} \label{sec:what_we_do}
+
+As a club, we are aiming to undertake the following initiatives:
+\begin{itemize}
+\item
+  {
+    \textbf{Talks, workshops, and paper reading sessions}: The format varies with the topic being covered. Typically we have a member give a short presentation followed by a discussion. Topics include but are not limited to academic papers, language reviews, infrastructure overviews, tutorials, and personal project presentations. You can find the list of talks from this semester on our \href{https://www.youtube.com/channel/UCjHdGaeMl9vej0l5CGjkYmg}{YouTube channel}. You can find meeting notes in our \href{https://dtyped-wiki.netlify.app/meetings/}{wiki}.
+  }
+\item
+  {
+    \textbf{Projects}: This includes both personal side-projects and something we do together as a club. The projects are PL and compiler-related. We highly encourage members to get involved in open-source projects. One project that we started this semester is implementing the Rust borrow checker on a small custom language. Other project ideas include developing a Georgia Tech esoteric language (down to the linker and processor), porting Complx and CircuitSim to a web app, and contributing to open-source projects like Swift.
+  }
+\item
+  {
+    \textbf{Networking and Community building}: This initiative focuses on career development and community engagement. We aim to do this by hosting networking sessions with researchers and engineers from academia and industry, attending conferences, organizing hackathons, and  maintaining a technical blog. We are looking to host our first hackathon in Spring 2022.
+  }
+\end{itemize}
+
+
+\section{Why do we want to become a CoC org?} \label{sec:why_coc}
+
+The theory and implementation of programming languages and compilers are deeply rooted in computer science and math. Our target audience resides largely in the College of Computing. We believe that the College of Computing will help us in reaching wider audiences and in fostering healthy relationships with partners interested in supporting the club.
+
+We want to make an impact in the CoC by fostering a community of compiler enthusiasts working on cutting-edge ideas and pushing the boundary of the field. Programming languages play a huge role in enabling a large suite of technologies that we have come to enjoy and use. Machine learning frameworks like PyTorch \cite{paszke2019pytorch}, TensorFlow \cite{abadi2016tensorflow}, and JAX \cite{jax2018github} use a Just-in-time (JIT) compiler to synthesize and run workloads. Modern systems programming languages like Rust \cite{rustgithub} and Zig \cite{ziggithub} are allowing developers to work on mission-critical software without having to worry about subtle bugs like use-after-free and data races from creeping in (for the most part). Microsoft has devoted a good amount of resources towards Project Everest \cite{projecteverest}, a group of researchers working on developing suites of formal verification libraries, languages, and certified software implementations. Very recently, Sam Gross, a software engineer from Facebook, authored an implementation of Python that completely removes the Global Interpreter Lock (GIL), something that the community has been trying to do for a very long time \cite{gross2021nogil}. Given these developments, we see immense potential in cultivating students that have skill-sets necessary to work in these domains.
+
+Further, we hope that the CoC can help sponsor initiatives like sending students to popular academic conferences like POPL, PLDI, and ASPLOS, organizing PL-themed hackathons, and getting researchers and engineers to talk about their work.
+
+
+\section{Goals} \label{sec:goals}
+
+\subsection{Short-term}
+
+\begin{itemize}
+\item Become more consistent with hosting talks, workshops, and paper reading sessions
+\item Organize our first hackathon
+\item Start at least three projects
+\item Host at least one networking session
+\end{itemize}
+
+\subsection{Long-term}
+
+\begin{itemize}
+\item Empower the next generation of innovators in the field
+\item Collaborate with research labs on campus to engage in novel research
+\item Develop and maintain a mainstream programming language
+\end{itemize}
+
+
+\section{Governance} \label{sec:governance}
+We have a board that helps to manage and run the club. Note, however, that the club is all about the community and major decisions are driven through community deliberation.
+
+We are looking to provide the following titles:
+\begin{itemize}
+\item Overall Director
+\item Director of Operations
+\item Director of Finance
+\item Director of Communication
+\end{itemize}
+
+Dr. Qirun Zhang (\href{mailto://qrzhang@gatech.edu}{qrzhang@gatech.edu}) will serve as our advisor.
+
+\section{Financial} \label{sec:financial}
+
+As mentioned before, we are planning on hosting our first hackathon in Spring 2022. It will be called ``gt-langjam''. You can find more details about its current state of development \href{https://dtyped-wiki.netlify.app/meetings/langjam\_and\_project\_ideas/}. We anticipate requiring funds for providing food (for two days), distributing swag, booking a venue (CoC/Klaus), and other logistical costs (marketing, hosting infrastructure).
+
+Further, we need funding to send four to five members to attend conferences.
+
+The Director of Finance will be in charge of managing these funds.
+
+\section{Code of Conduct} \label{sec:code_of_conduct}
+
+We have a code of conduct which is adapted from the Rust Code of Conduct. You can find it \href{https://dtyped-wiki.netlify.app/about/code-of-conduct/}{here}.
+
+\section{Conclusion}
+
+We described who we are as a club and what we are interested in achieving. We also provided a short outline of what's to come in the near future. Our target audience largely resides in the CoC, and we believe that by registering with the CoC we will be in a better position to achieve our goals and make an impact in the community. If you have any questions about the proposal, feel free to email me at \href{mailto://epinto6@gatech.edu}{epinto6@gatech.edu}. 
+
+\printbibliography[title=Bibliography]
+
+\end{document}
