@@ -8,7 +8,13 @@
   allcolors=.,
   urlcolor=blue,
 }
-\usepackage[backend=biber, style=numeric]{biblatex}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  isbn=false,
+  url=false,
+  doi=false
+]{biblatex}
 \addbibresource{citations.bib}
 
 % from https://tex.stackexchange.com/questions/178800/creating-sections-each-with-title-pages-in-beamers-slides
@@ -183,5 +189,8 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}[allowframebreaks]{Bibliography}
+\printbibliography
+\end{frame}
 
 \end{document}
